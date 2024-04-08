@@ -1,0 +1,18 @@
+{
+    "requires": {
+        "SolmanOData": {
+            "kind": "odata-v2",
+            "model": "srv/external/SolmanOData",
+            "credentials": {
+                "destination": "globalsolmanfiori",
+                "path": "/sap/opu/odata/sap/Z_SOLMAN_INCIDENT_DET_SRV"
+            }
+        }
+    },
+    "auth": {
+        "passport": {
+            "strategy": "JWT"
+        }
+    }
+
+}
