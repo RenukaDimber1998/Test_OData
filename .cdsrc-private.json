@@ -1,0 +1,73 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "db": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-004.hana.ondemand.com",
+          "org": "ABB Information Systems Ltd_is-erp-domain-dev-3nnyd3v3",
+          "space": "dev",
+          "instance": "Test_OData-db",
+          "key": "Test_OData-db-key",
+          "resolved": false
+        },
+        "kind": "hana",
+        "vcap": {
+          "name": "db"
+        }
+      },
+      "SolmanOData": {
+        "kind": "odata-v2",
+        "model": "srv/external/SolmanOData",
+        "credentials": {
+          "destination": "globalsolmanfiori",
+          "path": "/sap/opu/odata/sap/Z_SOLMAN_INCIDENT_DET_SRV"
+        }
+      },
+      "auth": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-004.hana.ondemand.com",
+          "org": "ABB Information Systems Ltd_is-erp-domain-dev-3nnyd3v3",
+          "space": "dev",
+          "instance": "Test_OData-xsuaa",
+          "key": "Test_OData-xsuaa-key",
+          "resolved": false
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "auth"
+        }
+      },
+      "destinations": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-004.hana.ondemand.com",
+          "org": "ABB Information Systems Ltd_is-erp-domain-dev-3nnyd3v3",
+          "space": "dev",
+          "instance": "Test_OData-destination",
+          "key": "Test_OData-destination-key",
+          "resolved": false
+        },
+        "kind": "destinations",
+        "vcap": {
+          "name": "destinations"
+        }
+      },
+      "custom-service:Test_OData-connectivity": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-004.hana.ondemand.com",
+          "org": "ABB Information Systems Ltd_is-erp-domain-dev-3nnyd3v3",
+          "space": "dev",
+          "instance": "Test_OData-connectivity",
+          "key": "Test_OData-connectivity-key",
+          "resolved": false
+        },
+        "vcap": {
+          "name": "custom-service:Test_OData-connectivity"
+        }
+      }
+    }
+  }
+}
